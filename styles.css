@@ -1,19 +1,27 @@
+
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
 }
 
-.header{
-    justify-content: center;
-    display: flex;
-    width: 100%;   
-    margin-bottom: 10px;
-}
+
+
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    width: 90%;
+    height: 70px;
+
+}
+.logo{
+    display: flex;
+    align-items: flex-start;
+    float: left;
+    flex-direction: row;
+    margin-left: 100px;
 }
 
 ul{
@@ -26,3 +34,137 @@ li {
     justify-content: center;
     margin: 10px;
 }
+.bars__menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+.bars__menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #9A00BF;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 270ms;
+}
+
+.activeline1__bars-menu{
+    transform: rotate(45deg) translate(-2px, 1px); 
+}
+
+.activeline2__bars-menu{
+    opacity: 0;
+    margin-left: -30px; 
+}
+
+.activeline3__bars-menu{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+
+
+
+
+.hero {
+    background: rgb(135,7,40);
+    background: linear-gradient(90deg, rgba(135,7,40,0.8995973389355743) 0%, rgba(154,0,191,1) 35%);
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+  
+  .hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  
+  .hero-button {
+    font-size: 18px;
+    padding: 12px 24px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+
+
+
+
+
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+}
+.container{
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+  }
+  
+  .card h2 {
+    margin: 10px;
+    font-size: 24px;
+  }
+  
+  .card p {
+    margin: 10px;
+    font-size: 18px;
+  }
+  
+  .card button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+  /* responsive */
