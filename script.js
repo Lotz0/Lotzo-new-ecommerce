@@ -44,3 +44,10 @@ function printProducts(products){
         `;       
     });
 }
+
+let button = document.getElementById("icon-menu");
+let sidebar = document.querySelector(".sidebar");
+
+button.addEventListener("click", function() {
+  sidebar.classList.toggle("open");
+});

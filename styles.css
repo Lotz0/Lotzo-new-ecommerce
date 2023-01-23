@@ -8,37 +8,89 @@
 
 
 
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    height: 70px;
-
+header{
+  background-color: rgb(60, 60, 60);
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-.logo{
-    display: flex;
-    align-items: flex-start;
-    float: left;
-    flex-direction: row;
-    margin-left: 100px;
+header h1{
+  height: 20px;
+  margin: 0px 0 0 15px;
+  color: white;
+}
+header nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li{
+  display: inline-block;
 }
 
-ul{
-    align-items: center;
+
+.search-container {
+  display: flex;
+  align-items: center;
 }
 
-li {
-    display: inline;
-    list-style-type: none;
-    justify-content: center;
-    margin: 10px;
+
+form {
+  display: flex;
+  border: none
+}
+
+input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 80%;
+}
+
+button[type=submit] {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-left: 10px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.icons{
+  display: inline-block;
+  margin: 0 15px 0 0;
+  color: white;
+}
+
+
+
+
+.user__icon{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 8px;
+  float: left;
+  color: white;
 }
 .bars__menu{
     width: 30px;
     height: 30px;
     cursor: pointer;
-
+    margin: 8px 0px 0px 8px;
+     float: right;
 }
 
 .bars__menu span {
@@ -57,13 +109,38 @@ li {
 
 .activeline2__bars-menu{
     opacity: 0;
-    margin-left: -30px; 
+    margin-left: 30px; 
 }
 
 .activeline3__bars-menu{
     transform: rotate(-45deg) translate(-4px, 2px);
 }
 
+.sidebar{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.5s;
+}
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.open {
+  width: 200px;
+}
 
 
 

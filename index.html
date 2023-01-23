@@ -11,27 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <nav class="navbar">
-        <h1 class="logo">Store</h1>
-        <ul>
-            <li></li>
-            <li>Internacional</li>
-            <li>Economia</li>
-            <li>Automotriz</li>
-            <li>Contacto</li>
-        </ul>
-        <div class="bars__menu" id="icon-menu">
+<header>
+    <h1 class="logo">Store</h1>
+
+    <div class="search-container">
+        <form action="/search">
+          <input type="text" placeholder="Search.." name="search" style="background-color: rgb(60, 60, 60)">
+          <button class="search_button" type="submit" style="background-color: rgb(60, 60, 60)"><i id="icon_search" class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+     
+    <div class="icons">
+        <div class="user__icon">
+            <img src="images/user.svg" alt="userIMG" >
+        </div>
+
+        <div class="bars__menu" id="icon-menu"  onclick="openNav()" onclick="closeNav()">
             <span class="line1__bars-menu"></span>
             <span class="line2__bars-menu"></span>
             <span class="line3__bars-menu"></span>
         </div>
-        
-    </nav>  
+    
+          
+    </div>
+
+
+</header>
+
+<div class="sidebar"id="mySidebar">
+    <a href="javascript:void(0)" class="closebtn" ></a><br>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
 
     <div class="hero">
-        <h1 class="hero-title">Welcome to my website!</h1>
-        <p class="hero-subtitle">Here you will find information about my projects and interests.</p>
+        <h1 class="hero-title">Example1</h1>
+        <p class="hero-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius exercitationem deserunt, repudiandae, nam veniam reiciendis laborum error blanditiis velit illum, harum magnam eaque libero asperiores inventore doloremque perspiciatis reprehenderit eos?</p>
         <a href="#" class="hero-button">Learn More</a>
       </div>
 
@@ -42,7 +58,7 @@
 
             </div>
         </div> 
-
+    <script src="https://kit.fontawesome.com/d299f03347.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
 </html>
