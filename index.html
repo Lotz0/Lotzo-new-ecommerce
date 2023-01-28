@@ -23,7 +23,7 @@
      
     <div class="icons">
         <div class="user__icon">
-            <img src="images/user.svg" alt="userIMG" >
+            <img src="images/user.svg" alt="userIMG" id="open-popup-button" >
         </div>
 
         <div class="bars__menu" id="icon-menu"  onclick="openNav()" onclick="closeNav()">
@@ -40,10 +40,31 @@
 
 <div class="sidebar"id="mySidebar">
     <a href="javascript:void(0)" class="closebtn" ></a><br>
-    <a href="#">Home</a>
+    <a href="#">Register</a>
     <a href="#">About</a>
     <a href="#">Contact</a>
   </div>
+
+
+<div id="popup-section" class="popup-section">
+  <form id="registration-form">
+    <h2>Register</h2>
+    <br>
+    <input type="username" id="username" name="username" placeholder=" Username" class="input_form">
+    <br>
+    <input type="mail" id="email" name="mail" placeholder=" Email" class="input_form">
+    <br>
+    <input type="password" id="password" name="password" placeholder=" Password" class="input_form">
+    <br>
+    <button type="submit" class="submit_button">Submit</button>
+  </form>
+  <button id="close-popup-button">Close</button>
+</div>
+
+
+
+
+
 
     <div class="hero">
         <h1 class="hero-title">Example1</h1>
@@ -58,7 +79,63 @@
 
             </div>
         </div> 
+
+
+
+
+
+
+
+        <footer>
+            <div class="footer-container">
+              <div class="footer-content">
+                <div class="footer-col">
+                  <h5>About Us</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a faucibus vulputate, felis tellus commodo risus, at eleifend nunc augue vel nibh.</p>
+                </div>
+                <div class="footer-col">
+                  <h5>Navigation</h5>
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h5>Contact Us</h5>
+                  <p>123 Main St.<br>Anytown, USA<br>555-555-5555</p>
+                </div>
+                <div class="footer-col">
+                  <h5>Follow Us</h5>
+                  <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="https://kit.fontawesome.com/d299f03347.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+    <script src="./registerForm.js"></script>
 </body>
 </html>

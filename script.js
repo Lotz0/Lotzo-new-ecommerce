@@ -17,7 +17,7 @@ function animateBars(){
 
 
 async function bringProducts(){
-    const url = 'https://api.escuelajs.co/api/v1/products'
+    const url = 'https://api.escuelajs.co/api/v1/categories'
 
     try {
         const result = await fetch(url)
@@ -32,13 +32,11 @@ async function bringProducts(){
 function printProducts(products){
     console.log(products)
     products.forEach((prod) => {
-      const{id, title, price, category, description, images} = prod
+      const{id, name, price, category, description, image} = prod
         container.innerHTML +=  `
         <div class="card">
-        <img src=${images} alt=${images}>
-        <h2>${title}</h2>
-        <p>$${price}</p>
-        <button>Add to Cart</button>
+        <img src=${image} alt=${image}>
+        <h2>${name}</h2>
       </div>
       
         `;       
