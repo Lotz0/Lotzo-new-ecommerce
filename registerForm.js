@@ -2,6 +2,8 @@ const openButton = document.getElementById("open-popup-button");
 const closeButton = document.getElementById("close-popup-button");
 const popupSection = document.getElementById("popup-section");
 const form = document.getElementById("registration-form");
+const warnings =document.getElementById("warnings");
+
 openButton.addEventListener("click", function() {
   popupSection.style.display = "block";
 });
@@ -15,7 +17,7 @@ closeButton.addEventListener("click", function() {
 
 
 
-form.addEventListener("submit", function(event) {
+/* form.addEventListener("submit", function(event) {
   event.preventDefault();
   
   const username = document.getElementById("username").value;
@@ -30,4 +32,4 @@ form.addEventListener("submit", function(event) {
 
   popupSection.style.display = "none";
 
-});
+}); */

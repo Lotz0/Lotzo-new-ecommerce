@@ -15,9 +15,9 @@
     <h1 class="logo">Store</h1>
 
     <div class="search-container">
-        <form action="/search">
-          <input type="text" placeholder="Search.." name="search" style="background-color: rgb(60, 60, 60)">
-          <button class="search_button" type="submit" style="background-color: rgb(60, 60, 60)"><i id="icon_search" class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+        <form class="search_form" action="/search">
+          <input type="text" placeholder="Search.." name="search" style="background-color: rgb(255, 255, 255)">
+          <button class="search_button" type="submit" style="background-color: rgb(255, 254, 254)"><i id="icon_search" class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
         </form>
       </div>
      
@@ -47,18 +47,28 @@
 
 
 <div id="popup-section" class="popup-section">
-  <form id="registration-form">
-    <h2>Register</h2>
-    <br>
-    <input type="username" id="username" name="username" placeholder=" Username" class="input_form">
-    <br>
-    <input type="mail" id="email" name="mail" placeholder=" Email" class="input_form">
-    <br>
-    <input type="password" id="password" name="password" placeholder=" Password" class="input_form">
-    <br>
-    <button type="submit" class="submit_button">Submit</button>
+  <form id="registration-form" action="" method="post">
+     <div class="form_container">
+        <h1>Register</h1>
+        <div class="grupo">
+          <input type="username" name="" id="name" required><span class="bar"></span>
+          <label for="">Name</label>
+        </div>
+        <div class="grupo">
+          <input type="email" name="" id="email" required><span class="bar"></span>
+          <label for="">Email</label>
+        </div>
+        <div class="grupo">
+          <input type="password" name="" id="password" required><span class="bar"></span>
+          <label for="">Password</label>
+        </div>
+        <button type="submit">Create Account</button>
+        <button id="close-popup-button" type="submit" >Close</button>
+
+     </div>
   </form>
-  <button id="close-popup-button">Close</button>
+  
+  
 </div>
 
 
