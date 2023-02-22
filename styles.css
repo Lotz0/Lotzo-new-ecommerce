@@ -69,7 +69,7 @@ button[type=submit] {
 
 .icons{
   display: inline-block;
-  margin: 5px 25px 0 0;
+  margin: 5px 0px 0 10;
   color: white;
 }
 
@@ -84,6 +84,8 @@ button[type=submit] {
   float: left;
   color: white;
 }
+
+
 .bars__menu{
     width: 30px;
     height: 30px;
@@ -138,7 +140,12 @@ button[type=submit] {
   color: #7f7e7e;
 }
 .open {
-  width: 200px;
+  width: 400px;
+}
+.cartIcon{
+  padding-top: 30px;
+  cursor: pointer;
+  width: 30px;
 }
 
 
@@ -215,12 +222,25 @@ button[type=submit] {
 
 
 
+.cartContainer{
+  display: flex;
+  align-items: center;
+}
 
+  .cartBody{
+    display: flex;
+    flex-direction: column;
+   width: 100%;
+  }
 
+  .img-cart{
+    width: 200px;
+    padding: 20px;
+  }
 
-
-
-
+.cartFooter{
+  width: 200px;
+}
 
 
 
@@ -412,12 +432,12 @@ button[type=submit] {
       align-self: center;
       justify-self: center;
       margin: 0;
-
-
-
-
-
+    }
+    header{
+      position: fixed;
+    }
   }
+
   @media (max-width:1024px) {
     .container{
       width: 100%;
@@ -435,14 +455,18 @@ button[type=submit] {
     .card{
       justify-self: center;
     }
+    header{
+      position: fixed;
+    }
   }
+  
 
 
 @media (max-width:700px) {
   header{
     display: flex;
     width: 100%;
-    position: relative;
+    position: fixed;
   }
   .search-container{
     display: none;
