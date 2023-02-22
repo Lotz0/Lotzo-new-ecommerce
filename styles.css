@@ -18,6 +18,7 @@ header{
   top: 0;
   left: 0;
   width: 100%;
+  margin: 0;
 }
 header h1{
   height: 22px;
@@ -141,108 +142,112 @@ button[type=submit] {
 }
 
 
-
-
-.hero {
-    background: rgb(135,7,40);
-    background: linear-gradient(90deg, rgba(135,7,40,0.8995973389355743) 0%, rgba(154,0,191,1) 35%);
-    background-size: cover;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-  }
-  
-  .hero-title {
-    font-size: 48px;
-    margin-bottom: 16px;
-  }
-  
-  .hero-subtitle {
-    font-size: 24px;
-    margin-bottom: 32px;
-  }
-  
-  .hero-button {
-    font-size: 18px;
-    padding: 12px 24px;
-    background-color: orange;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-
-
-
-
-
-
-
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex-direction: row;
+.hero video{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
 }
-.container{
+
+
+  
+  
+
+
+
+  .container {  
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 4px;
     grid-row-gap: 4px;
-    align-self: center;
+    justify-items: center;
     justify-self: center;
-    margin: 20px 20px;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-self: center;
-    justify-self: center;
+    margin: 0;
   }
-  
-  .card {
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 300px;
+    height: 550px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding: 20px;
     margin: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    overflow: hidden;
-    align-self: center;
-    justify-self: center;
   }
-  
-  .card img {
-    width: 100%;
-  }
-  
-  .card h2 {
-    margin: 10px;
-    font-size: 24px;
+  .cardImage{
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 180px;
+    align-self: center;
   }
-  
-  .card p {
-    margin: 10px;
-    font-size: 18px;
+  .price{
+    color: grey;
+    font-size: 22px;
   }
-  
-  .card button {
-    padding: 10px 20px;
-    background-color: blue;
-    color: white;
+  .description{
+    font-size: 14px;
+    padding-bottom: 32px;
+  }
+  .name{
+    font-size: 20px;
+  }
+
+
+
+
+  .buyButton{
     border: none;
-    border-radius: 10px;
-    font-size: 18px;
+   outline: 0;
+   padding: 12px;
+   color: white;
+    background-color: #000;
+    text-align: center;
     cursor: pointer;
+   width: 100%;
+   font-size: 16px;
   }
+  .buyButton:hover{
+    opacity: 0.8;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -280,7 +285,7 @@ button[type=submit] {
     float: left;
     text-align: center;
     padding: 5px;
-
+    
   }
   
   footer h5 {
@@ -406,7 +411,7 @@ button[type=submit] {
       grid-row-gap: 4px;
       align-self: center;
       justify-self: center;
-      margin: 20px 20px;
+      margin: 0;
 
 
 
@@ -423,9 +428,12 @@ button[type=submit] {
       grid-row-gap: 4px;
       align-self: center;
       justify-self: center;
-      margin: 20px 20px;
+      margin: 0;
 
 
+    }
+    .card{
+      justify-self: center;
     }
   }
 
@@ -451,7 +459,12 @@ button[type=submit] {
     grid-row-gap: 4px;
     align-self: center;
     justify-self: center;
-    margin: 20px 20px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    justify-self: center;
   }
 
   header h1{
