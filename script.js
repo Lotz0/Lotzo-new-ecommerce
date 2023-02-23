@@ -203,7 +203,9 @@ const stockProducts = [
 ]
 const container = document.querySelector("#container");
 const cleanCart = document.getElementById("cleanCart");
-const totalPrice = document.querySelector("#totalPrice");
+const totalPrice = document.querySelector("#totalPrice")
+const cartAmount = document.querySelector("#cartAmount")
+const purchaseButton = document.querySelector("#checkBuy")
 let cart = []
 
 document.addEventListener("DOMContentLoaded", () =>{
@@ -226,6 +228,24 @@ stockProducts.forEach((prod)=>{
   </div>
   `
 });
+
+
+
+
+purchaseButton.addEventListener("click" , () => {
+    if(cart.length === 0){
+      Swal.fire({
+        title: "its empty",
+        text: "buy something",
+        icon: "error",
+        confirmButtonText:"ok",
+      }) 
+        } else {
+          location.href = "buy.html"
+        }
+      
+    
+})
 
 
 cleanCart.addEventListener("click", () => {
@@ -276,12 +296,17 @@ const showCart = () => {
     `
   })
   
+  cartAmount.textContent = cart.length
+
+
+  totalPrice.innerText = cart.reduce((acc, prod) => acc + prod.amount * prod.price, 0)
+
 
   saveStorage()
 }
 
 
-totalPrice.textContent = cart.reduce((acc, prod) => acc + prod.amount * prod.price, 0)
+
 
 
 
@@ -311,7 +336,7 @@ function saveStorage(){
 
 
 
-//icono menu
+/* //icono menu
 document.querySelector(".bars__menu").addEventListener("click", animateBars);
 
 var line1__bars = document.querySelector(".line1__bars-menu");
@@ -332,7 +357,7 @@ let sidebar = document.querySelector(".sidebar");
 
 button.addEventListener("click", function() {
   sidebar.classList.toggle("open");
-});
+}); */
 
 
 

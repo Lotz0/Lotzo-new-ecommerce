@@ -506,4 +506,17 @@ button[type=submit] {
 }
 
 
-}}
+}
+
+
+
+
+/*///////////////////////BuyHTML styles////////////////////////////////////*/
+.container2{
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+
