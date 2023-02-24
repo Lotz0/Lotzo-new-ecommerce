@@ -10,16 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-<header>
-    <h1 class="logo">Store</h1>
+<body class="body">
+<header class="head">
+    <h1 class="logo">FabricStore</h1>
 
-    <div class="search-container">
-        <form class="search_form" action="/search">
-          <input type="text" placeholder="Search.." name="search" style="background-color: rgb(255, 255, 255)">
-          <button class="search_button" type="submit" style="background-color: rgb(255, 254, 254)"><i id="icon_search" class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
-        </form>
-      </div>
+    
      
     <div class="icons">
         
@@ -41,28 +36,35 @@
 
 <div class="sidebar"id="mySidebar">
     <a href="javascript:void(0)" class="closebtn" ></a><br>
-    <a href="#">Shirts</a>
-    <a href="#">Pants</a>
-    <a href="#">Hoodies</a>
-    <a href="#">Accesories</a>
+    <a href="#">Buy</a>
+    <a href="#">About us</a>
+    <a href="#">Contact</a>
+    
     
 
     
     <div class="cartIcon" id="open-cart">
-      <img src="/images/cart-1-svgrepo-com.svg" alt="cartIMG" id="openCart">
+      <div class="cartAndNumber">
+        <img src="/images/cart-1-svgrepo-com.svg" alt="cartIMG" id="openCart">
         <p class="amount" id="cartAmount"></p>
+      </div>
       <div class="cartBody">
 
       </div>
         <div class="cartFooter">
-        <button type="button" id="cleanCart">
-          Clean cart
-        </button>
-        <button type="button" id="checkBuy">
-          Confirm purchase
-        </button>
-        <span>Total: </span>
-        <p class="Price" id="totalPrice"></p>
+          <div class="cartButtons">
+            <button type="button" class="cartButton" id="cleanCart">
+              Clean cart
+            </button>
+            <button type="button" class="cartButton" id="checkBuy">
+             Confirm purchase
+          </button>
+        </div>
+
+        <div class="priceshow">
+          <span>Total: $ </span>
+          <p class="Price" id="totalPrice"></p>
+        
       </div>
       
       </div>
@@ -86,7 +88,7 @@
 
 
 
-
+<main class="main">
 
 
 <div id="popup-section" class="popup-section">
@@ -123,10 +125,23 @@
         
         <video src="videos/video.mp4" onloadedmetadata="this.muted=true" autoplay loop></video>
       </div>
-
+      <div class="videoText">
+        <h1>Welcome to FabricStore</h1>
+        <p>We're inspired by the fast-paced world of fashion, and our collections reflect the latest styles and trends from around the world. Our buyers travel extensively to source the best materials and designs, ensuring that our customers always have access to the hottest looks.</p>
+      </div>
     
         
+
+      <div class="filterButton">
+        <button class="buttonFilter" id="filterAll">All</button>
+        <button class="buttonFilter" id="filterShirt">Shirts</button>
+        <button class="buttonFilter" id="filterPant">Pants</button>
+        <button class="buttonFilter" id="filterHoodie">Hoodies</button>
+        <button class="buttonFilter" id="filterAccesories">More</button>
+      </div>
+
       <div class="container" id="container">
+        
 
             
                 
@@ -171,7 +186,7 @@
           
         
 
-
+        </main>
 
 
 
@@ -189,5 +204,6 @@
     <script src="./menu.js"></script>
     <script src="./registerForm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./objectfilter.js"></script>
 </body>
 </html>

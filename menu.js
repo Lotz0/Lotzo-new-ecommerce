@@ -12,11 +12,17 @@ function animateBars(){
 }
 
 
-
+let main = document.querySelector('.main')
 
 let button = document.getElementById("icon-menu");
 let sidebar = document.querySelector(".sidebar");
+let header = document.querySelector(".head");
+let text = document.querySelector(".videoText");
+
 
 button.addEventListener("click", function() {
   sidebar.classList.toggle("open");
+  main.classList.toggle("opacity");
+  header.classList.toggle("opacity");
+  text.classList.toggle("none");
 });

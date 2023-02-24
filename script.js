@@ -14,6 +14,7 @@ const stockProducts = [
       price:20,
       image: "images/T-shirt1.jpg",
       amount: 1,
+      category: "Shirt",
     },
     {
       id:2,
@@ -22,6 +23,7 @@ const stockProducts = [
       price:20,
       image: "images/T-shirt2.jpg",
       amount: 1,
+      category: "Shirt",
     },
     {
       id:3,
@@ -30,6 +32,7 @@ const stockProducts = [
       price:26,
       image: "images/T-shirt3.jpg",
       amount: 1,
+      category: "Shirt",
     },
     {
       id:4,
@@ -38,6 +41,7 @@ const stockProducts = [
       price:23,
       image: "images/T-shirt4.jpg",
       amount: 1,
+      category: "Shirt",
     },
     {
       id:5,
@@ -46,6 +50,7 @@ const stockProducts = [
       price:33,
       image: "images/T-shirt5.jpg",
       amount: 1,
+      category: "Shirt",
     },
     {
       id:6,
@@ -54,6 +59,7 @@ const stockProducts = [
       price:38,
       image: "images/T-shirt6.jpg",
       amount: 1,
+      category: "Shirt",
     },
     {
       id:7,
@@ -62,6 +68,7 @@ const stockProducts = [
       price:50,
       image: "images/pants1.jpg",
       amount: 1,
+      category: "Pants",
     },
     {
       id:8,
@@ -70,6 +77,7 @@ const stockProducts = [
       price:52,
       image: "images/pants2.jpg",
       amount: 1,
+      category: "Pants"
     },
     {
       id:9,
@@ -78,6 +86,7 @@ const stockProducts = [
       price:65,
       image: "images/pants3.jpg",
       amount: 1,
+      category: "Pants"
     },
     {
       id:10,
@@ -86,6 +95,7 @@ const stockProducts = [
       price:78,
       image: "images/pants4.jpg",
       amount: 1,
+      category: "Pants"
     },
     {
       id:11,
@@ -94,6 +104,7 @@ const stockProducts = [
       price:33,
       image: "images/pants5.jpg",
       amount: 1,
+      category: "Pants"
     },
     {
       id:12,
@@ -102,6 +113,7 @@ const stockProducts = [
       price:38,
       image: "images/pants6.jpg",
       amount: 1,
+      category: "Pants"
     },
     {
       id:13,
@@ -110,6 +122,7 @@ const stockProducts = [
       price:46,
       image: "images/hoodie1.jpg",
       amount: 1,
+      category: "Hoodies"
     },
     {
       id:14,
@@ -118,6 +131,7 @@ const stockProducts = [
       price:47,
       image: "images/hoodie2.jpg",
       amount: 1,
+      category: "Hoodies"
     },
     {
       id:15,
@@ -126,6 +140,7 @@ const stockProducts = [
       price:52,
       image: "images/hoodie3.jpg",
       amount: 1,
+      category: "Hoodies"
     },
     {
       id:16,
@@ -134,6 +149,7 @@ const stockProducts = [
       price:65,
       image: "images/hoodie4.jpg",
       amount: 1,
+      category: "Hoodies"
     },
     {
       id:17,
@@ -142,6 +158,7 @@ const stockProducts = [
       price:78,
       image: "images/hoodie5.jpg",
       amount: 1,
+      category: "Hoodies"
     },
     {
       id:18,
@@ -150,6 +167,7 @@ const stockProducts = [
       price:73,
       image: "images/hoodie6.jpg",
       amount: 1,
+      category: "Hoodies"
     },
     {
       id:19,
@@ -158,6 +176,7 @@ const stockProducts = [
       price:23,
       image: "images/acc1.jpg",
       amount: 1,
+      category: "Accesories"
     },
     {
       id:20,
@@ -166,6 +185,7 @@ const stockProducts = [
       price:24,
       image: "images/acc2.jpg",
       amount: 1,
+      category: "Accesories"
     },
     {
       id:21,
@@ -174,6 +194,7 @@ const stockProducts = [
       price:21,
       image: "images/acc3.jpg",
       amount: 1,
+      category: "Accesories"
     },
     {
       id:22,
@@ -182,6 +203,7 @@ const stockProducts = [
       price:40,
       image: "images/acc4.jpg",
       amount: 1,
+      category: "Accesories"
     },
     {
       id:23,
@@ -190,6 +212,7 @@ const stockProducts = [
       price:16,
       image: "images/acc5.jpg",
       amount: 1,
+      category: "Accesories"
     },
     {
       id:24,
@@ -198,14 +221,15 @@ const stockProducts = [
       price:23,
       image: "images/acc6.jpg",
       amount: 1,
+      category: "Accesories"
     },
 
 ]
 const container = document.querySelector("#container");
 const cleanCart = document.getElementById("cleanCart");
-const totalPrice = document.querySelector("#totalPrice")
-const cartAmount = document.querySelector("#cartAmount")
-const purchaseButton = document.querySelector("#checkBuy")
+const totalPrice = document.querySelector("#totalPrice");
+const cartAmount = document.querySelector("#cartAmount");
+const purchaseButton = document.querySelector("#checkBuy");
 let cart = []
 
 document.addEventListener("DOMContentLoaded", () =>{
@@ -215,14 +239,14 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 
 stockProducts.forEach((prod)=>{
-  const {id, name, description, price, image, amount} = prod
+  const {id, name, description, price, image, amount, category } = prod
   container.innerHTML +=`<div class="card">
   <img class="cardImage" src="${image}" alt="imagee">
   <div class="cardbody">
       <h2 class="name">${name}</h2>
       <h3 class="price">$${price}</h3>
       <p class="description">${description}</p>
-      <p class="amount">${amount}</p>
+      
     </div>
     <button onclick="addProduct(${id})" class="buyButton">Agregar al carrito</button>
   </div>
@@ -241,10 +265,13 @@ purchaseButton.addEventListener("click" , () => {
         confirmButtonText:"ok",
       }) 
         } else {
-          location.href = "buy.html"
-        }
-      
-    
+          Swal.fire({
+            title: "Your purchase is confirm",
+            text: "Thank you for support us",
+            icon: "success",
+            confirmButtonText:"ok",
+        })
+      }
 })
 
 
@@ -280,19 +307,18 @@ const showCart = () => {
   cartBody.innerHTML = ""
   cart.forEach((prod) => {
     const {id, name, description, price, image, amount} = prod
-    cartBody.innerHTML += `<div class"cartContainer"
+    cartBody.innerHTML += `<div class"cartContainer">
     <div>
       <img class="img-cart" src="${image}"/>
       </div>
 
-      <div>
-      <p>Item:${name}</p>
-      <p>Price:${price}</p>
-      <p>amount:${amount}</p>
-
+      <div class="cartInfo">
+      <p class:"productName">${name}</p>
+      <p class:"productAmount"> x${amount} </p>
+      <p class:"productPrice"> 1 x $${price}</p>
       <button onclick="deleteProduct(${id})" class="delete">Delete</button>
     </div>
-    
+    </div>
     `
   })
   
@@ -319,47 +345,5 @@ function deleteProduct(id){
 
 function saveStorage(){
   localStorage.setItem("cart", JSON.stringify(cart))
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* //icono menu
-document.querySelector(".bars__menu").addEventListener("click", animateBars);
-
-var line1__bars = document.querySelector(".line1__bars-menu");
-var line2__bars = document.querySelector(".line2__bars-menu");
-var line3__bars = document.querySelector(".line3__bars-menu");
-
-function animateBars(){
-    line1__bars.classList.toggle("activeline1__bars-menu");
-    line2__bars.classList.toggle("activeline2__bars-menu");
-    line3__bars.classList.toggle("activeline3__bars-menu");
-}
-
-
-
-
-let button = document.getElementById("icon-menu");
-let sidebar = document.querySelector(".sidebar");
-
-button.addEventListener("click", function() {
-  sidebar.classList.toggle("open");
-}); */
-
-
-
-
+};
 
