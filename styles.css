@@ -552,8 +552,17 @@ button[type=submit] {
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 0 0 7px rgba(255, 255, 255, 0.8);
-
+    z-index: 2;
   }
+  .warnings{
+    width: 130px;
+    text-align: center;
+    margin: auto;
+    color: rebeccapurple;
+    padding-top: 15px;
+  }
+
+
   .form_container{
     padding-top: 12px ;
     width: 100%;
@@ -622,7 +631,9 @@ button[type=submit] {
       position: fixed;
     }
     
-
+    .popup-section {
+      margin-top: 100px;
+     }
 
 
 
@@ -740,6 +751,11 @@ button[type=submit] {
   font-size: 8px;
   height: 30px;
 }
+
+.popup-section {
+ margin-top: 130px;
+}
+
 
 }
 

@@ -1,8 +1,13 @@
 const openButton = document.getElementById("open-popup-button");
 const closeButton = document.getElementById("close-popup-button");
 const popupSection = document.getElementById("popup-section");
+
 const form = document.getElementById("registration-form");
-const warnings =document.getElementById("warnings");
+const warnings = document.getElementById("warnings");
+const names = document.getElementById("name");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+
 
 openButton.addEventListener("click", function() {
   popupSection.style.display = "block";
@@ -13,23 +18,17 @@ closeButton.addEventListener("click", function() {
 });
 
 
+form.addEventListener('submit', e =>{
+  e.preventDefault()
+  let warnings = ""
+    if(names.value.length <6){
+        warnings += "the name entered is not valid<br>"
+    }
+})
 
 
 
 
-/* form.addEventListener("submit", function(event) {
-  event.preventDefault();
-  
-  const username = document.getElementById("username").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  localStorage.setItem("username", username);
-  localStorage.setItem("email", email);
-  localStorage.setItem("password", password);
 
 
-  alert("the account as been created successfully")
 
-  popupSection.style.display = "none";
-
-}); */

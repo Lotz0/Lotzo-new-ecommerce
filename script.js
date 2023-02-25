@@ -14,7 +14,9 @@ const stockProducts = [
       price:20,
       image: "images/T-shirt1.jpg",
       amount: 1,
-      category: "Shirt",
+      category: {
+        id :"shirt"
+      },
     },
     {
       id:2,
@@ -23,7 +25,9 @@ const stockProducts = [
       price:20,
       image: "images/T-shirt2.jpg",
       amount: 1,
-      category: "Shirt",
+      category: {
+        id :"shirt"
+      },
     },
     {
       id:3,
@@ -32,7 +36,9 @@ const stockProducts = [
       price:26,
       image: "images/T-shirt3.jpg",
       amount: 1,
-      category: "Shirt",
+      category: {
+        id :"shirt"
+      },
     },
     {
       id:4,
@@ -41,7 +47,9 @@ const stockProducts = [
       price:23,
       image: "images/T-shirt4.jpg",
       amount: 1,
-      category: "Shirt",
+      category: {
+        id :"shirt"
+      },
     },
     {
       id:5,
@@ -50,7 +58,9 @@ const stockProducts = [
       price:33,
       image: "images/T-shirt5.jpg",
       amount: 1,
-      category: "Shirt",
+      category: {
+        id :"shirt"
+      },
     },
     {
       id:6,
@@ -59,7 +69,9 @@ const stockProducts = [
       price:38,
       image: "images/T-shirt6.jpg",
       amount: 1,
-      category: "Shirt",
+      category: {
+        id :"shirt"
+      },
     },
     {
       id:7,
@@ -68,7 +80,9 @@ const stockProducts = [
       price:50,
       image: "images/pants1.jpg",
       amount: 1,
-      category: "Pants",
+      category: {
+        id :"pants"
+      },
     },
     {
       id:8,
@@ -77,7 +91,9 @@ const stockProducts = [
       price:52,
       image: "images/pants2.jpg",
       amount: 1,
-      category: "Pants"
+      category: {
+        id :"pants"
+      },
     },
     {
       id:9,
@@ -86,7 +102,9 @@ const stockProducts = [
       price:65,
       image: "images/pants3.jpg",
       amount: 1,
-      category: "Pants"
+      category: {
+        id :"pants"
+      },
     },
     {
       id:10,
@@ -95,7 +113,9 @@ const stockProducts = [
       price:78,
       image: "images/pants4.jpg",
       amount: 1,
-      category: "Pants"
+      category: {
+        id :"pants"
+      },
     },
     {
       id:11,
@@ -104,7 +124,9 @@ const stockProducts = [
       price:33,
       image: "images/pants5.jpg",
       amount: 1,
-      category: "Pants"
+      category: {
+        id :"pants"
+      },
     },
     {
       id:12,
@@ -113,7 +135,9 @@ const stockProducts = [
       price:38,
       image: "images/pants6.jpg",
       amount: 1,
-      category: "Pants"
+      category: {
+        id :"pants"
+      },
     },
     {
       id:13,
@@ -122,7 +146,9 @@ const stockProducts = [
       price:46,
       image: "images/hoodie1.jpg",
       amount: 1,
-      category: "Hoodies"
+      category: {
+        id :"hoodies"
+      },
     },
     {
       id:14,
@@ -131,7 +157,9 @@ const stockProducts = [
       price:47,
       image: "images/hoodie2.jpg",
       amount: 1,
-      category: "Hoodies"
+      category: {
+        id :"hoodies"
+      },
     },
     {
       id:15,
@@ -140,7 +168,9 @@ const stockProducts = [
       price:52,
       image: "images/hoodie3.jpg",
       amount: 1,
-      category: "Hoodies"
+      category: {
+        id :"hoodies"
+      },
     },
     {
       id:16,
@@ -149,7 +179,9 @@ const stockProducts = [
       price:65,
       image: "images/hoodie4.jpg",
       amount: 1,
-      category: "Hoodies"
+      category: {
+        id :"hoodies"
+      },
     },
     {
       id:17,
@@ -158,7 +190,9 @@ const stockProducts = [
       price:78,
       image: "images/hoodie5.jpg",
       amount: 1,
-      category: "Hoodies"
+      category: {
+        id :"hoodies"
+      },
     },
     {
       id:18,
@@ -167,7 +201,9 @@ const stockProducts = [
       price:73,
       image: "images/hoodie6.jpg",
       amount: 1,
-      category: "Hoodies"
+      category: {
+        id :"hoodies"
+      },
     },
     {
       id:19,
@@ -176,7 +212,9 @@ const stockProducts = [
       price:23,
       image: "images/acc1.jpg",
       amount: 1,
-      category: "Accesories"
+      category: {
+        id :"accesories"
+      },
     },
     {
       id:20,
@@ -185,7 +223,9 @@ const stockProducts = [
       price:24,
       image: "images/acc2.jpg",
       amount: 1,
-      category: "Accesories"
+      category: {
+        id :"accesories"
+      },
     },
     {
       id:21,
@@ -194,7 +234,9 @@ const stockProducts = [
       price:21,
       image: "images/acc3.jpg",
       amount: 1,
-      category: "Accesories"
+      category: {
+        id :"accesories"
+      },
     },
     {
       id:22,
@@ -203,7 +245,9 @@ const stockProducts = [
       price:40,
       image: "images/acc4.jpg",
       amount: 1,
-      category: "Accesories"
+      category: {
+        id :"accesories"
+      },
     },
     {
       id:23,
@@ -212,7 +256,9 @@ const stockProducts = [
       price:16,
       image: "images/acc5.jpg",
       amount: 1,
-      category: "Accesories"
+      category: {
+        id :"accesories"
+      },
     },
     {
       id:24,
@@ -221,7 +267,9 @@ const stockProducts = [
       price:23,
       image: "images/acc6.jpg",
       amount: 1,
-      category: "Accesories"
+      category: {
+        id :"accesories"
+      },
     },
 
 ]
@@ -237,8 +285,13 @@ document.addEventListener("DOMContentLoaded", () =>{
   showCart()
 })
 
+function loadProducts(productosElegidos){
 
-stockProducts.forEach((prod)=>{
+
+    container.innerHTML = ""
+
+
+  productosElegidos.forEach((prod)=>{
   const {id, name, description, price, image, amount, category } = prod
   container.innerHTML +=`<div class="card">
   <img class="cardImage" src="${image}" alt="imagee">
@@ -251,9 +304,12 @@ stockProducts.forEach((prod)=>{
     <button onclick="addProduct(${id})" class="buyButton">Agregar al carrito</button>
   </div>
   `
-});
+  console.log("hola")
+  })
+} 
+;
 
-
+loadProducts(stockProducts)
 
 
 purchaseButton.addEventListener("click" , () => {
@@ -270,7 +326,11 @@ purchaseButton.addEventListener("click" , () => {
             text: "Thank you for support us",
             icon: "success",
             confirmButtonText:"ok",
+            
+            
         })
+        cart.length = []
+            showCart()
       }
 })
 
@@ -340,10 +400,32 @@ function deleteProduct(id){
   const productID = id
   cart = cart.filter((product)=> product.id !== productID)
   showCart()
-
+  
 }
 
 function saveStorage(){
   localStorage.setItem("cart", JSON.stringify(cart))
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
