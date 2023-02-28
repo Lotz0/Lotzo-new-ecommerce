@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 const stockProducts = [
     {
       id:1,
@@ -304,7 +297,6 @@ function loadProducts(productosElegidos){
     <button onclick="addProduct(${id})" class="buyButton">Agregar al carrito</button>
   </div>
   `
-  console.log("hola")
   })
 } 
 ;

@@ -2,11 +2,11 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     box-sizing: border-box;
 }
 
-
+/* buttons, inputs and obscure background, simple animations*/
 .buttonFilter{
   appearance: none;
   background-color: transparent;
@@ -50,8 +50,51 @@
 main{
   transition: 0.6s;
 }
+input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 80%;
+}
+.filterButton{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.filterButton button{
+  margin: 20px;
+}
+.buyButton{
+  border: none;
+ outline: 0;
+ padding: 12px;
+ color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+ width: 100%;
+ font-size: 16px;
+}
+.buyButton:hover{
+  opacity: 0.8;
+}
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
 
 
+/* header */
 
 header{
   background-color: rgb(255, 255, 255);
@@ -90,38 +133,12 @@ header nav ul li{
 
 
 
-input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-  width: 80%;
-}
-
-button[type=submit] {
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-left: 10px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-
-
-
-
-
+/* icons and hamburger menu animation */
 .icons{
   display: inline-block;
   margin-right:20px ;
   color: white;
 }
-
-
-
-
 .user__icon{
   width: 30px;
   height: 30px;
@@ -162,7 +179,7 @@ button[type=submit] {
 .activeline3__bars-menu{
     transform: rotate(-45deg) translate(-4px, 2px);
 }
-
+/* sidebar menu and cart styles */
 .sidebar{
   height: 100%;
   width: 0;
@@ -209,111 +226,6 @@ button[type=submit] {
   font-size: 36px;
   padding-top: 10px;
 }
-
-.hero video{
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  filter: brightness(50%); 
-  position: relative;
-  
-}
-
-
-.videoText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  text-align: center;
-  color: #fff;
-  
-}
-.videoText h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.videoText p {
-  font-size: 1.5rem;
-}
-
-
-.filterButton{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.filterButton button{
-  margin: 20px;
-}
-  
-  
-
-
-
-  .container {  
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 4px;
-    grid-row-gap: 4px;
-    justify-items: center;
-    justify-self: center;
-    margin: 0;
-  }
-  .card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 300px;
-    height: 500px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-    padding: 20px;
-    margin: 10px;
-  }
-  .cardImage{
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    align-self: center;
-  }
-  .price{
-    color: grey;
-    font-size: 22px;
-  }
-  .description{
-    font-size: 14px;
-    padding-bottom: 32px;
-  }
-  .name{
-    font-size: 20px;
-  }
-
-
-
-
-  .buyButton{
-    border: none;
-   outline: 0;
-   padding: 12px;
-   color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-   width: 100%;
-   font-size: 16px;
-  }
-  .buyButton:hover{
-    opacity: 0.8;
-  }
-
-
-
-
 .cartcontainer{
   display: flex;
   align-items: center;
@@ -434,34 +346,126 @@ button[type=submit] {
 
 
 
+/* hero section, background video */
+.videoText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+.videoText h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.videoText p {
+  font-size: 1.5rem;
+}
+.hero video{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  filter: brightness(50%); 
+  position: relative; 
+}
 
 
+/* buy section styles */
+  .container {  
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    justify-items: center;
+    justify-self: center;
+    margin: 0;
+  }
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding: 20px;
+    margin: 10px;
+  }
+  .cardImage{
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    align-self: center;
+  }
+  .price{
+    color: grey;
+    font-size: 22px;
+  }
+  .description{
+    font-size: 14px;
+    padding-bottom: 32px;
+  }
+  .name{
+    font-size: 20px;
+  }
+
+/* contacto section styles */
+.contact{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 60px 0px 60px 0px;
+  padding: 30px;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+#contact-form {
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  height: 500px;
+  align-items: center;
+}
+
+.contact-name, .contact-email, .contact-message {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-name, .input-email
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.input-message{
+  width: 100%;
+  border: none;
+  height: 200px;
+}
+.contact-page{
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  height: 500px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* footer styles */
   .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -522,27 +526,12 @@ button[type=submit] {
     font-size: 20px;
   }
   
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* popup section, register form */
   .popup-section {
     display: flex;
     flex-direction: column;
     width: 350px;
-    height: 600px;
+    height: 650px;
     margin: 3% auto;
     display: none;
     position: fixed;
@@ -595,25 +584,16 @@ button[type=submit] {
     display: block;
     width: 100%;
     border: none;
-    border-bottom: 1px solid ;
+     ;
   }
-
   input:focus{
     outline: none;
     color: rgb(94, 93, 93);
   }
-
   label{
     font-size: 16px;
     
   }
-
-
-  
-
-
-
-
   /* responsive */
   @media (max-width:1200px) {
     .container{
@@ -630,16 +610,10 @@ button[type=submit] {
     header{
       position: fixed;
     }
-    
     .popup-section {
       margin-top: 100px;
      }
-
-
-
-
   }
-
   @media (max-width:1024px) {
     .container{
       width: 100%;
@@ -662,8 +636,6 @@ button[type=submit] {
       position: fixed;
     }
   }
-
-
   .videoText {
     position: absolute;
     top: 25%;
@@ -673,17 +645,13 @@ button[type=submit] {
     text-align: center;
     color: #fff;
   }
-
   .videoText h1 {
     font-size: 2rem;
     margin-bottom: 0.8rem;
   }
-  
   .videoText p {
     font-size: 1.0rem;
   }
-  
-
 
 @media (max-width:700px) {
   header{
@@ -700,12 +668,10 @@ button[type=submit] {
     text-align: center;
     color: #fff;
   }
-
   .videoText h1 {
     font-size: 1rem;
     margin-bottom: 0.3rem;
   }
-  
   .videoText p {
     display: none;
   }
@@ -731,7 +697,6 @@ button[type=submit] {
   .card{
     justify-self: center;
   }
-
   header h1{
     height: 20px;
     margin: 4px 0 0 20px;
@@ -740,7 +705,6 @@ button[type=submit] {
 .hero-subtitle{
   max-width: 80%;
 }
-
 .footer-container{
   height: 300px;
   padding-bottom: 100px;
@@ -755,8 +719,16 @@ button[type=submit] {
 .popup-section {
  margin-top: 130px;
 }
-
-
+.contact{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 60px 0px 60px 0px;
+  padding: 30px;
+}
+#contact-form {
+  margin-bottom: 40px;
+}
 }
 
 

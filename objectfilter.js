@@ -1,8 +1,5 @@
 const buttonFilter = document.querySelectorAll('.buttonFilter')
 
-
-console.log(buttonFilter)
-
 buttonFilter.forEach(boton => {
     boton.addEventListener("click", (e) =>{
     

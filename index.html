@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
 </head>
 <body class="body">
 <header class="head">
     <h1 class="logo">FabricStore</h1>
-
-    
-     
     <div class="icons">
         
         <div class="user__icon">
@@ -27,18 +26,16 @@
             <span class="line2__bars-menu"></span>
             <span class="line3__bars-menu"></span>
         </div>
-    
-          
     </div>
-
-
 </header>
 
+
 <div class="sidebar"id="mySidebar">
+
     <a href="javascript:void(0)" class="closebtn" ></a><br>
-    <a href="#">Buy</a>
-    <a href="#">About us</a>
-    <a href="#">Contact</a>
+    <a href="#aboutUs">About us</a>
+    <a href="#container">Buy</a>
+    <a href="#contactHere">Contact</a>
     
     
 
@@ -66,33 +63,15 @@
           <p class="Price" id="totalPrice"></p>
         
       </div>
-      
       </div>
     </div>
     </div>
   
-
-
-
-
-
-  
-    
-
-
-
-
-
-
-
-
-
-
 <main class="main">
 
 
 <div id="popup-section" class="popup-section">
-  <form id="registration-form" action="" method="post">
+  <form id="registration-form" action="" method="post" class="register_form">
      <div class="form_container">
         <h1>Register</h1>
         <div class="grupo">
@@ -113,16 +92,9 @@
 
      </div>
   </form>
-  
-  
 </div>
 
-
-
-
-
-
-    <div class="hero">
+    <div class="hero" id="aboutUs">
         
         <video src="videos/video.mp4" onloadedmetadata="this.muted=true" autoplay loop></video>
       </div>
@@ -141,20 +113,42 @@
         <button class="buttonFilter" id="accesories">More</button>
       </div>
 
-      <div class="container" id="container">
-        
-
-            
-                
-
-            
+      <div class="container" id="container">     
      </div> 
 
 
+     <div class="contact" id="contactHere">
+      <form id="contact-form">
+        <label for="name" class="contact-name">Name:</label>
+        <input type="text" id="inputName" class="input-name" name="name">
+      
+        <label for="email" class="contact-email">Email:</label>
+        <input type="email" id="email" class="input-email" name="email">
+      
+        <label for="message" class="contact-message">Message:</label>
+        <textarea id="message" class="input-message" name="message"></textarea>
+      
+        <button type="submit">Send</button>
+      </form>
+    
+    <div class="contact-page">
+      <h3>Contact us</h3>
 
-
-
-
+      <div class>
+        <i class="fa-brands fa-whatsapp"></i>
+        <p>424390393</p>
+      </div>
+      <div class>
+        <i class="fa-sharp fa-solid fa-envelope"></i>
+        <p>theFabricStore@outlook.com</p>
+      </div>
+      <div class>
+        <i class="fa-sharp fa-solid fa-location-dot"></i>
+        <p>1626 Jefferson Ave, Miami Beach FL</p>
+      </div>
+      <iframe width="300px" height="300px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=1626%20Jefferson%20ave,%20miami%20beach+()&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">GPS car tracker</a></iframe>
+    </div>
+  </div>
 
         <footer>
             <div class="footer-container">
@@ -184,27 +178,14 @@
               </div>
             </div>
           </footer>
-          
-        
-
         </main>
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="https://kit.fontawesome.com/d299f03347.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
     <script src="./menu.js"></script>
     <script src="./registerForm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./contactForm.js"></script>
     <script src="./objectfilter.js"></script>
 </body>
 </html>
